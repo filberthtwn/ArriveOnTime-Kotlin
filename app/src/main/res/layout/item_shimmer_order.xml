@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/three_quarter_size"
+        android:background="@android:color/white"
+        android:padding="@dimen/one_half_size">
+
+        <TextView
+            android:id="@+id/tv_order_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#443576"
+            android:textColor="@color/placeholder"
+            android:textSize="@dimen/text_large"
+            android:background="@color/placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btn_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/placeholder"
+            android:paddingHorizontal="@dimen/default_size"
+            android:paddingVertical="@dimen/half_size"
+            android:text="Open Order"
+            android:textColor="@color/placeholder"
+            android:textSize="@dimen/text_mediumsmallest"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_order_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_size"
+            app:layout_constraintTop_toBottomOf="@id/btn_order"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_from"
+            app:tint="@color/placeholder" />
+
+        <TextView
+            android:id="@+id/tv_order_from_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From:"
+            android:background="@color/placeholder"
+            android:textColor="@color/placeholder"
+            android:textSize="@dimen/text_small"
+            android:layout_marginStart="@dimen/default_size"
+            app:layout_constraintStart_toEndOf="@id/img_order_from"
+            app:layout_constraintTop_toTopOf="@id/img_order_from" />
+
+        <TextView
+            android:id="@+id/tv_order_from_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/placeholder"
+            android:textSize="@dimen/text_mediumsmallest"
+            android:background="@color/placeholder"
+            android:layout_marginTop="@dimen/quarter_size"
+            app:layout_constraintStart_toStartOf="@id/tv_order_from_text"
+            app:layout_constraintTop_toBottomOf="@id/tv_order_from_text"
+            android:text="Universitas Ciputra" />
+
+        <ImageView
+            android:id="@+id/img_order_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_to"
+            android:layout_marginTop="@dimen/double_size"
+            app:layout_constraintTop_toBottomOf="@id/tv_order_from_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="@color/placeholder" />
+
+        <TextView
+            android:id="@+id/tv_order_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To:"
+            android:textColor="@color/placeholder"
+            android:background="@color/placeholder"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toStartOf="@id/tv_order_from_name"
+            app:layout_constraintTop_toTopOf="@id/img_order_to" />
+
+        <TextView
+            android:id="@+id/tv_order_to_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_mediumsmallest"
+            android:textColor="@color/placeholder"
+            android:background="@color/placeholder"
+            android:layout_marginTop="@dimen/quarter_size"
+            app:layout_constraintEnd_toEndOf="@id/tv_order_from_name"
+            app:layout_constraintStart_toStartOf="@id/tv_order_to"
+            app:layout_constraintTop_toBottomOf="@id/tv_order_to"
+            android:text="Rigsto" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/placeholder"
+            app:layout_constraintTop_toBottomOf="@id/img_order_from"
+            app:layout_constraintBottom_toTopOf="@id/img_order_to"
+            app:layout_constraintStart_toStartOf="@id/img_order_from"
+            app:layout_constraintEnd_toEndOf="@id/img_order_from" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

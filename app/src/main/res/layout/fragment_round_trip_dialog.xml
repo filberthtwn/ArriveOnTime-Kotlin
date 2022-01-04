@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/three_quarter_size"
+    android:paddingBottom="@dimen/one_half_size"
+    android:paddingHorizontal="@dimen/one_half_size"
+    android:orientation="vertical"
+    android:id="@+id/dialog_round_trip"
+    tools:context=".view.detail.RoundTripDialogFragment">
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="6dp"
+        android:background="@drawable/semi_rounded_button"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/one_half_size"
+        android:text="Round Trip"
+        android:textSize="@dimen/text_medium"
+        android:textColor="@color/black"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tv_round_trip_order_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2298099"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_gianterter"
+        android:textStyle="bold"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/default_size"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/default_size"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wait Time"
+                android:textColor="@color/primaryText"
+                android:textSize="@dimen/text_mediumsmallest" />
+
+            <EditText
+                android:id="@+id/edt_round_trip_wait_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_size"
+                android:background="@drawable/semi_rounded_button"
+                android:backgroundTint="@color/primaryBg"
+                android:padding="@dimen/default_size"
+                android:inputType="number"
+                android:hint="0"
+                android:textColor="@color/placeholder" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/default_size"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number of Boxes"
+                android:textColor="@color/primaryText"
+                android:textSize="@dimen/text_mediumsmallest" />
+
+            <EditText
+                android:id="@+id/edt_round_trip_number_boxes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_size"
+                android:background="@drawable/semi_rounded_button"
+                android:backgroundTint="@color/primaryBg"
+                android:padding="@dimen/default_size"
+                android:inputType="number"
+                android:hint="0"
+                android:textColor="@color/placeholder" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/one_half_size"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transportation"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/text_mediumsmallest" />
+
+        <Spinner
+            android:id="@+id/spinner_transportation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_spinner"
+            android:padding="@dimen/default_size"
+            android:layout_marginTop="@dimen/half_size"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Image of Proof"
+        android:textColor="@color/primaryText"
+        android:textSize="@dimen/text_mediumsmallest"
+        android:layout_marginTop="@dimen/one_half_size" />
+
+    <Button
+        android:id="@+id/btn_round_trip_upload_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/semi_rounded_button"
+        android:backgroundTint="@color/primary"
+        android:text="Upload Image"
+        android:textColor="@color/white"
+        android:padding="@dimen/default_size"
+        android:layout_marginTop="@dimen/default_size"/>
+
+    <LinearLayout
+        android:id="@+id/ll_round_trip_has_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/default_size">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_attachment" />
+
+        <TextView
+            android:id="@+id/tv_round_trip_filename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/default_size"
+            android:text="Lorem ipsum.png"
+            android:textColor="@color/primary" />
+
+        <ImageView
+            android:id="@+id/img_round_trip_clear_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clear" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_round_trip_finished"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/semi_rounded_button"
+        android:backgroundTint="@color/primary"
+        android:text="Finished"
+        android:layout_marginTop="@dimen/double_size"
+        android:textColor="@color/white" />
+</LinearLayout>

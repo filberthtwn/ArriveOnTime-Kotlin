@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.complete.CompleteOrderFragment">
+
+    <include layout="@layout/toolbar_nav" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/one_half_size"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order ID"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_medium" />
+
+        <TextView
+            android:id="@+id/tv_complete_order_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2298099"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_gianterter"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            android:textColor="@color/primaryText"
+            android:layout_marginTop="@dimen/default_size" />
+
+        <EditText
+            android:id="@+id/edt_complete_order_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_rounded_button"
+            android:backgroundTint="@color/primaryBg"
+            android:layout_marginTop="@dimen/half_size"
+            android:padding="@dimen/default_size"
+            android:inputType="text"
+            android:hint="Enter last name here"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_complete_order_recipient_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Does Silviera Nagari live here?"
+            android:layout_marginTop="@dimen/default_size"
+            android:textColor="@color/primaryText" />
+
+        <Spinner
+            android:id="@+id/spinner_complete_order_recipient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_rounded_button"
+            android:backgroundTint="@color/primaryBg"
+            android:padding="@dimen/default_size"
+            android:spinnerMode="dropdown"
+            android:dropDownSelector="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Relationship to the recipient?"
+            android:layout_marginTop="@dimen/default_size"
+            android:textColor="@color/primaryText" />
+
+        <Spinner
+            android:id="@+id/spinner_complete_order_recipient_relationship"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_rounded_button"
+            android:backgroundTint="@color/primaryBg"
+            android:padding="@dimen/default_size"
+            android:spinnerMode="dropdown"
+            android:dropDownSelector="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        <Button
+            android:id="@+id/btn_complete_order_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_size"
+            android:background="@drawable/semi_rounded_button"
+            android:backgroundTint="@color/primary"
+            android:layout_marginTop="@dimen/default_size"
+            android:text="Next"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

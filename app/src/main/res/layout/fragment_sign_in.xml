@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_main_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.auth.SignInFragment"
+        android:padding="@dimen/double_size">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/login_image_size"
+            android:layout_height="@dimen/login_image_size"
+            android:layout_marginTop="@dimen/triple_size"
+            android:layout_gravity="center"
+            android:src="@drawable/img_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to AOT Delivery"
+            android:gravity="center"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_huge"
+            android:layout_marginTop="@dimen/one_half_size"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please login first"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_medium"
+            android:layout_marginTop="@dimen/half_size" />
+
+        <EditText
+            android:id="@+id/edt_login_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_rounded_button"
+            android:backgroundTint="@color/lightGray"
+            android:hint="Email"
+            android:textSize="@dimen/text_mediumsmall"
+            android:padding="@dimen/default_size"
+            android:layout_marginTop="@dimen/double_size"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/edt_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_rounded_button"
+            android:backgroundTint="@color/lightGray"
+            android:hint="Password"
+            android:textSize="@dimen/text_mediumsmall"
+            android:padding="@dimen/default_size"
+            android:layout_marginTop="@dimen/default_size"
+            android:inputType="textPassword" />
+
+        <CheckBox
+            android:id="@+id/cb_remember_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_size"
+            android:button="@drawable/remember_checkbox"
+            android:buttonTint="@color/primary"
+            android:padding="@dimen/half_size"
+            android:text="Remember Password"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/text_mediumsmall" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_size"
+            android:background="@drawable/semi_rounded_button"
+            android:backgroundTint="@color/primary"
+            android:letterSpacing="0"
+            android:text="Login"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</layout>

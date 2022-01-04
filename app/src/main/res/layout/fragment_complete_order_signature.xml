@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".view.complete.CompleteOrderSignatureFragment">
+
+    <include layout="@layout/toolbar_nav" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/one_half_size">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Signature"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_gianterter"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btn_complete_order_signature_rewrite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/semi_rounded_button"
+                android:backgroundTint="@color/primary"
+                android:text="Rewrite"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <com.github.gcacace.signaturepad.views.SignaturePad
+            android:id="@+id/signature_complete_order"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@drawable/semi_rounded_button"
+            android:backgroundTint="@color/primaryBg"
+            android:layout_marginTop="@dimen/one_half_size"
+            app:penColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_complete_order_finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_rounded_button"
+            android:backgroundTint="@color/primary"
+            android:text="Finish"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/one_half_size" />
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

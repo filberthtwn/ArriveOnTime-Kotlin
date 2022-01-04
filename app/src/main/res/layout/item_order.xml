@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="order"
+            type="com.omkarsoft.arriveontimedelivery.data.model.Order" />
+        <variable
+            name="color"
+            type="com.omkarsoft.arriveontimedelivery.data.model.Order" />
+        <variable
+            name="isShowExpectedTime"
+            type="Boolean" />
+        <variable
+            name="listener"
+            type="com.omkarsoft.arriveontimedelivery.viewInterface.OrderListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/three_quarter_size"
+        android:background="@android:color/white"
+        android:onClick="@{()->listener.onOrderClicked(order)}"
+        android:padding="@dimen/default_size">
+
+        <ImageView
+            android:id="@+id/img_order_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_from"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_order" />
+
+        <ImageView
+            android:id="@+id/img_order_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_to"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <TextView
+            android:id="@+id/tv_order_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{order.id}"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btn_order"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="#443576" />
+
+        <TextView
+            android:id="@+id/btn_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/primary"
+            android:onClick="@{()->listener.onButtonClicked(order)}"
+            android:paddingHorizontal="@dimen/default_size"
+            android:paddingVertical="@dimen/half_size"
+            android:text="@{order.status}"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_mediumsmallest"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Open Order" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_roundtrip_status"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@{order.roundTrip == 1 ? @color/round_trip : @color/round_trip}"
+            android:visibility="@{order.roundTrip == 1 ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_order">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_reload" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_order_from"
+            app:layout_constraintTop_toTopOf="@+id/img_order_from">
+
+            <TextView
+                android:id="@+id/tv_order_from_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="From:"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/tv_order_from_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{order.senderName != "" ? order.senderName : order.sender.name}'
+                android:textColor="@color/primaryText"
+                android:textSize="@dimen/text_mediumsmallest"
+                tools:text="Universitas Ciputra" />
+
+            <TextView
+                android:id="@+id/tv_expected_pickup_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{"Exp. Pickup Time: " +order.expectedPickupTime}'
+                android:textSize="@dimen/text_small"
+                android:visibility="@{isShowExpectedTime ? View.VISIBLE : View.GONE }"
+                tools:text="Exp. Pickup Time: -" />
+
+            <TextView
+                android:id="@+id/tv_expected_delivery_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{"Exp. Delivery Time: " + order.expectedDeliveryTime}'
+                android:textSize="@dimen/text_small"
+                android:visibility='@{isShowExpectedTime ? View.VISIBLE : View.GONE }'
+                tools:text="Exp. Delivery Time: -" />
+
+            <TextView
+                android:id="@+id/tv_order_from_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{(order.senderAddress != "") ? order.senderAddress : order.sender.address}'
+                android:textSize="@dimen/text_small"
+                tools:text="Citraland CBD" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_order_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To:"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="@id/img_order_to" />
+
+        <TextView
+            android:id="@+id/tv_order_to_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text='@{(order.recipientName != "") ? order.recipientName : order.recipient.name}'
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/text_mediumsmallest"
+            app:layout_constraintStart_toStartOf="@id/tv_order_to"
+            app:layout_constraintTop_toBottomOf="@id/tv_order_to"
+            tools:text="Rigsto" />
+
+        <TextView
+            android:id="@+id/tv_order_to_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text='@{(order.recipientAddress != "") ? order.recipientAddress : order.recipient.address}'
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toStartOf="@id/tv_order_to_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_order_to_name"
+            tools:text="Taman Puspa Raya B6/6" />
+
+        <TextView
+            android:id="@+id/tv_order_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text='@{order.pickupDate}'
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_order_id"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_order_id"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_id"
+            tools:text="00:00 AM, June 01/01/2021" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/primaryText"
+            app:layout_constraintBottom_toTopOf="@id/img_order_to"
+            app:layout_constraintEnd_toEndOf="@id/img_order_from"
+            app:layout_constraintStart_toStartOf="@id/img_order_from"
+            app:layout_constraintTop_toBottomOf="@id/img_order_from" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

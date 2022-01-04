@@ -1,0 +1,11 @@
+<resources>
+<!-- Base application theme. -->
+    <style name="Theme.AOTDelivery" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:statusBarColor">@color/primary</item>
+    </style>
+</resources>

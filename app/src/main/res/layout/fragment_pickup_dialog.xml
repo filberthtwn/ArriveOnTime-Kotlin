@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/one_half_size"
+    android:orientation="vertical"
+    tools:context=".view.detail.PickupDialogFragment">
+
+    <TextView
+        android:id="@+id/tv_popup_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No. of pieces delivering"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_num_delivering"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/half_size"
+        android:background="@drawable/semi_rounded_button"
+        android:backgroundTint="@color/primaryBg"
+        android:padding="@dimen/default_size"
+        android:inputType="number"
+        android:hint="0"
+        android:textColor="@color/placeholder" />
+
+    <Button
+        android:id="@+id/btn_pickup_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/semi_rounded_button"
+        android:backgroundTint="@color/primary"
+        android:text="Done"
+        android:layout_marginTop="@dimen/double_size"
+        android:textColor="@color/white" />
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/three_quarter_size"
+    android:paddingBottom="@dimen/three_quarter_size"
+    tools:context=".view.detail.CancelOrderDialogFragment">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="100dp"
+        android:layout_height="6dp"
+        android:layout_gravity="center"
+        android:background="@drawable/semi_rounded_button"
+        android:backgroundTint="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/double_half_size"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/default_size"
+        android:paddingEnd="@dimen/default_size">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reason Type"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/text_mediumsmallest" />
+
+        <Spinner
+            android:id="@+id/sp_cancel_reason_type"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="@dimen/half_size"
+            android:background="@drawable/bg_spinner"
+            android:padding="@dimen/default_size"
+            android:spinnerMode="dropdown" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/one_half_size"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/default_size"
+        android:paddingEnd="@dimen/default_size">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Comment"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/text_mediumsmallest" />
+
+        <EditText
+            android:id="@+id/edt_cancel_comment"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="@dimen/half_size"
+            android:background="@drawable/semi_rounded_button"
+            android:backgroundTint="@color/primaryBg"
+            android:hint="(Optional)"
+            android:inputType="text"
+            android:padding="@dimen/default_size"
+            android:textColor="@color/placeholder"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_cancel_done"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="@dimen/default_size"
+        android:layout_marginTop="@dimen/one_half_size"
+        android:layout_marginEnd="@dimen/default_size"
+        android:layout_marginBottom="@dimen/default_size"
+        android:background="@drawable/semi_rounded_button"
+        android:backgroundTint="@color/muted"
+        android:text="Done"
+        android:textColor="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="notification"
+            type="com.omkarsoft.arriveontimedelivery.data.model.Notification" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/default_size">
+
+        <TextView
+            android:id="@+id/tv_comment_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{notification.date}"
+            tools:text="Notification Date"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/tv_comment_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Notification Message"
+            android:text="@{notification.message}"
+            android:textSize="@dimen/text_mediumsmallest"
+            android:textColor="@color/primaryText" />
+    </LinearLayout>
+</layout>

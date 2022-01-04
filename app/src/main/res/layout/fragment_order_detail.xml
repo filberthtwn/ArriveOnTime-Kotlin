@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/primaryBg"
+        tools:context=".view.detail.OrderDetailFragment">
+
+        <include layout="@layout/toolbar_nav" />
+
+<!--        <include-->
+<!--            android:id="@+id/shimmer_order_detail"-->
+<!--            layout="@layout/fragment_shimmer_order_detail"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content" />-->
+        <LinearLayout
+            android:id="@+id/ll_order_detail_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="32dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <View
+                            android:id="@+id/shimmer_view_04"
+                            android:layout_width="125dp"
+                            android:layout_height="35dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/rounded_button"
+                            android:backgroundTint="#1A2b2b2b" />
+
+                        <View
+                            android:id="@+id/shimmer_view_05"
+                            android:layout_width="200dp"
+                            android:layout_height="21dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/rounded_button"
+                            android:backgroundTint="#1A2b2b2b" />
+
+                        <View
+                            android:id="@+id/shimmer_view_06"
+                            android:layout_width="250dp"
+                            android:layout_height="21dp"
+                            android:background="@drawable/rounded_button"
+                            android:backgroundTint="#1A2b2b2b" />
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="32dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_detail_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="24dp"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="21dp"
+                                android:layout_height="21dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/rounded_button"
+                                android:backgroundTint="#1A2b2b2b" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="100dp"
+                                    android:layout_height="21dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/rounded_button"
+                                    android:backgroundTint="#1A2b2b2b" />
+
+                                <View
+                                    android:layout_width="150dp"
+                                    android:layout_height="21dp"
+                                    android:background="@drawable/rounded_button"
+                                    android:backgroundTint="#1A2b2b2b" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="21dp"
+                                android:layout_height="21dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/rounded_button"
+                                android:backgroundTint="#1A2b2b2b" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="100dp"
+                                    android:layout_height="21dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:background="@drawable/rounded_button"
+                                    android:backgroundTint="#1A2b2b2b" />
+
+                                <View
+                                    android:layout_width="150dp"
+                                    android:layout_height="21dp"
+                                    android:background="@drawable/rounded_button"
+                                    android:backgroundTint="#1A2b2b2b" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_detail_second"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <View
+                            android:layout_width="200dp"
+                            android:layout_height="21dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/rounded_button"
+                            android:backgroundTint="#1A2b2b2b" />
+
+                        <View
+                            android:layout_width="250dp"
+                            android:layout_height="21dp"
+                            android:layout_marginBottom="24dp"
+                            android:background="@drawable/rounded_button"
+                            android:backgroundTint="#1A2b2b2b" />
+
+                        <View
+                            android:layout_width="200dp"
+                            android:layout_height="21dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/rounded_button"
+                            android:backgroundTint="#1A2b2b2b" />
+
+                        <View
+                            android:layout_width="250dp"
+                            android:layout_height="21dp"
+                            android:background="@drawable/rounded_button"
+                            android:backgroundTint="#1A2b2b2b" />
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/sv_order_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/one_half_size"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/one_half_size">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_detail_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/primaryText"
+                            android:textSize="@dimen/text_large"
+                            android:textStyle="bold"
+                            tools:text="2298099" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/text_large"
+                            android:textStyle="bold"
+                            tools:text="New Order" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_detail_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/half_size"
+                        android:textColor="@color/primaryText"
+                        android:textSize="@dimen/text_mediumsmallest"
+                        tools:text="10C Technologies" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_mediumsmallest"
+                        tools:text="This is the account notes" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_detail_maps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/one_half_size"
+                        android:background="@android:color/white"
+                        android:padding="@dimen/one_half_size">
+
+                        <ImageView
+                            android:id="@+id/img_detail_sender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_from"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/img_sender_phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_phone_number"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_detail_sender_phone_number"
+                            app:layout_constraintStart_toStartOf="@id/tv_detail_sender_name"
+                            app:layout_constraintTop_toTopOf="@id/tv_detail_sender_phone_number" />
+
+                        <ImageView
+                            android:id="@+id/img_sender_telephone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/default_size"
+                            android:src="@drawable/ic_telephone"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_detail_sender_phone_number"
+                            app:layout_constraintStart_toEndOf="@id/tv_detail_sender_phone_number"
+                            app:layout_constraintTop_toTopOf="@id/tv_detail_sender_phone_number" />
+
+                        <ImageView
+                            android:id="@+id/img_sender_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_location"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_detail_sender_location"
+                            app:layout_constraintStart_toStartOf="@id/img_sender_phone_number"
+                            app:layout_constraintTop_toTopOf="@id/tv_detail_sender_location" />
+
+                        <ImageView
+                            android:id="@+id/img_detail_recipient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/double_size"
+                            android:src="@drawable/ic_to"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_detail_sender_instruction" />
+
+                        <ImageView
+                            android:id="@+id/img_recipient_phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_phone_number"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_detail_recipient_phone_number"
+                            app:layout_constraintStart_toStartOf="@id/tv_detail_recipient_name"
+                            app:layout_constraintTop_toTopOf="@id/tv_detail_recipient_phone_number" />
+
+                        <ImageView
+                            android:id="@+id/img_recipient_telephone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/default_size"
+                            android:src="@drawable/ic_telephone"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_detail_recipient_phone_number"
+                            app:layout_constraintStart_toEndOf="@id/tv_detail_recipient_phone_number"
+                            app:layout_constraintTop_toTopOf="@id/tv_detail_recipient_phone_number" />
+
+                        <ImageView
+                            android:id="@+id/img_recipient_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_location"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_detail_recipient_location"
+                            app:layout_constraintStart_toStartOf="@id/img_recipient_phone_number"
+                            app:layout_constraintTop_toTopOf="@id/tv_detail_recipient_location" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_sender_from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/default_size"
+                            android:text="From:"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintStart_toEndOf="@id/img_detail_sender"
+                            app:layout_constraintTop_toTopOf="@id/img_detail_sender" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_sender_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryText"
+                            android:textSize="@dimen/text_mediumsmallest"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/tv_detail_sender_from"
+                            app:layout_constraintTop_toBottomOf="@id/tv_detail_sender_from"
+                            tools:text="Universitas Ciputra" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_sender_phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintStart_toStartOf="@id/tv_detail_sender_location"
+                            app:layout_constraintTop_toBottomOf="@id/tv_detail_sender_name"
+                            tools:text="081332221998" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_sender_telephone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/half_size"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintStart_toEndOf="@id/img_sender_telephone"
+                            app:layout_constraintTop_toTopOf="@id/tv_detail_sender_phone_number"
+                            tools:text="03171487248" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_sender_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/half_size"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintStart_toEndOf="@id/img_sender_location"
+                            app:layout_constraintTop_toBottomOf="@id/tv_detail_sender_phone_number"
+                            tools:text="14275 Midway RD., 125, Addison, TX, 75001" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_sender_instruction"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/tv_detail_sender_from"
+                            app:layout_constraintTop_toBottomOf="@id/tv_detail_sender_location"
+                            tools:text="This is the instruction" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_recipient_to"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="To:"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintStart_toStartOf="@id/tv_detail_sender_from"
+                            app:layout_constraintTop_toTopOf="@id/img_detail_recipient" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_recipient_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryText"
+                            android:textSize="@dimen/text_mediumsmallest"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/tv_detail_sender_from"
+                            app:layout_constraintTop_toBottomOf="@id/tv_detail_recipient_to"
+                            tools:text="Universitas Ciputra" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_recipient_phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintStart_toStartOf="@id/tv_detail_recipient_location"
+                            app:layout_constraintTop_toBottomOf="@id/tv_detail_recipient_name"
+                            tools:text="081332221998" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_recipient_telephone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/half_size"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintStart_toEndOf="@id/img_recipient_telephone"
+                            app:layout_constraintTop_toTopOf="@id/tv_detail_recipient_phone_number"
+                            tools:text="03171487248" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_recipient_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/half_size"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintStart_toEndOf="@id/img_recipient_location"
+                            app:layout_constraintTop_toBottomOf="@id/tv_detail_recipient_phone_number"
+                            tools:text="14275 Midway RD., 125, Addison, TX, 75001" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_recipient_instruction"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_small"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/tv_detail_recipient_to"
+                            app:layout_constraintTop_toBottomOf="@id/tv_detail_recipient_location"
+                            tools:text="This is the instruction" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="0dp"
+                            android:background="@color/primaryText"
+                            app:layout_constraintBottom_toTopOf="@id/img_detail_recipient"
+                            app:layout_constraintEnd_toEndOf="@id/img_detail_sender"
+                            app:layout_constraintStart_toStartOf="@id/img_detail_sender"
+                            app:layout_constraintTop_toBottomOf="@id/img_detail_sender" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/one_half_size"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/one_half_size">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Service Type"
+                            android:textColor="@color/primaryText" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_service_type"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/primaryText"
+                            android:textStyle="bold"
+                            tools:text="4 HR" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/half_size"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pickup Ready"
+                            android:textColor="@color/primaryText" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_pickup_ready"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/primaryText"
+                            android:textStyle="bold"
+                            tools:text="20 Oct 2020, 10:24 PM" />
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/half_size"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_detail_shipper_release"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_check"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Shipper Release"
+                            android:textColor="@color/primaryText"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/img_detail_shipper_release"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/half_size"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_detail_signature_required"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="3dp"
+                            android:src="@drawable/ic_check"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Signature Required"
+                            android:textColor="@color/primaryText"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/img_detail_signature_required"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/half_size"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_detail_round_trip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_cross"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Round Trip"
+                            android:textColor="@color/primaryText"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/img_detail_round_trip"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_order_detail_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/one_half_size"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/one_half_size">
+
+                    <TextView
+                        android:id="@+id/tv_detail_requestor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Requested By"
+                        android:textColor="@color/primaryText"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_size"
+                        android:text="Item Quantity"
+                        android:textColor="@color/primaryText" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_item_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primaryText"
+                        android:textStyle="bold"
+                        tools:text="1 (100gr)" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_size"
+                        android:text="Admin Notes"
+                        android:textColor="@color/primaryText" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_admin_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primaryText"
+                        android:textStyle="bold"
+                        tools:text="This is the test order" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_detail_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="@dimen/one_half_size"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_order_detail_dispatch_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/semi_rounded_button"
+                    android:backgroundTint="@color/primary"
+                    android:text="Complete"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_detail_order_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/btn_order_detail_confirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/semi_rounded_button"
+                        android:backgroundTint="@color/primary"
+                        android:text="Confirm"
+                        android:textColor="@color/white" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/semi_rounded_button"
+                        android:backgroundTint="@color/primary">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_add_photo"
+                            app:tint="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_order_detail_upload"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="7dp"
+                            android:background="@android:color/transparent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

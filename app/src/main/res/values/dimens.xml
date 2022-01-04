@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_image_size">125dp</dimen>
+
+    <!--Universal-->
+    <dimen name="quint_size">80dp</dimen>
+    <dimen name="quad_half_size">72dp</dimen>
+    <dimen name="quad_size">64dp</dimen>
+    <dimen name="triple_half_size">56dp</dimen>
+    <dimen name="triple_size">48dp</dimen>
+    <dimen name="double_half_size">40dp</dimen>
+    <dimen name="double_size">32dp</dimen>
+    <dimen name="one_half_size">24dp</dimen>
+    <dimen name="one_quarter_size">20dp</dimen>
+    <dimen name="default_size">16dp</dimen>
+    <dimen name="three_quarter_size">12dp</dimen>
+    <dimen name="half_size">8dp</dimen>
+    <dimen name="quarter_size">4dp</dimen>
+    <dimen name="tiny_size">2dp</dimen>
+
+    <!--Text-->
+    <dimen name="text_most_giantest">48sp</dimen>
+    <dimen name="text_giantest">36sp</dimen>
+    <dimen name="text_gianterter">32sp</dimen>
+    <dimen name="text_gianter">30sp</dimen>
+    <dimen name="text_giant">26sp</dimen>
+    <dimen name="text_huge">24sp</dimen>
+    <dimen name="text_big">22sp</dimen>
+    <dimen name="text_large">20sp</dimen>
+    <dimen name="text_medium">17sp</dimen>
+    <dimen name="text_mediumsmall">16sp</dimen>
+    <dimen name="text_mediumsmaller">15sp</dimen>
+    <dimen name="text_mediumsmallest">14sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_smaller">10sp</dimen>
+</resources>

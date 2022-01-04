@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bnv_deliver"
+        android:title="Deliver"
+        android:icon="@drawable/ic_delivery" />
+    <item
+        android:id="@+id/bnv_present"
+        android:title="Present"
+        android:icon="@drawable/ic_present" />
+    <item
+        android:id="@+id/bnv_dispatch"
+        android:title="Dispatch"
+        android:icon="@drawable/ic_dispatch" />
+    <item
+        android:id="@+id/bnv_open"
+        android:title="Open/Next Day"
+        android:icon="@drawable/ic_open_next_day" />
+    <item
+        android:id="@+id/bnv_partial_pickup"
+        android:title="Partial"
+        android:icon="@drawable/ic_partial_pickup" />
+</menu>
